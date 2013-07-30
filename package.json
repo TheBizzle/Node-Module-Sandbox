@@ -6,8 +6,11 @@
     "start": "coffee app.coffee"
   },
   "dependencies": {
-    "express": "3.3.4",
-    "jade": "*",
-    "less-middleware": "*"
+    "amdefine":        "*",
+    "coffee-script":   "*",
+    "express":         "3.3.4",
+    "jade":            "*",
+    "less-middleware": "*",
+    "requirejs":       "*"
   }
 }
