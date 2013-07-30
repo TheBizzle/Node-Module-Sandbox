@@ -4,7 +4,7 @@ requirejs.config({
   nodeRequire: require
 })
 
-requirejs ["express", "./routes/index", "./routes/user", "http", "path", "less-middleware"], (express, index, user, http, path, lessFunc) ->
+requirejs(["express", "./routes/index", "./routes/user", "http", "path", "less-middleware"], (express, index, user, http, path, lessFunc) ->
 
   app = express()
   
@@ -22,6 +22,7 @@ requirejs ["express", "./routes/index", "./routes/user", "http", "path", "less-m
   
   # development only
   app.use(express.errorHandler()  if "development" is app.get("env"))
+
   app.get("/",      index)
   app.get("/users", user)
 
@@ -29,4 +30,5 @@ requirejs ["express", "./routes/index", "./routes/user", "http", "path", "less-m
     console.log("Express server listening on port " + app.get("port"))
   )
 
+)
 
