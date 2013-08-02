@@ -13,6 +13,21 @@ module.exports = (grunt) ->
             ext: '.js'
           }
         ]
+      },
+      compile_require_config: {
+        files: {
+          'require-config.js': ['require-config.coffee']
+        }
+      }
+    },
+    requirejs: {
+      compile: {
+        options: {
+          baseUrl:        "target/",
+          mainConfigFile: "require-config.js",
+          out:            "dist/application.js",
+          name:           "application"
+        }
       }
     },
     uglify: {
@@ -30,4 +45,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-requirejs')
   grunt.loadNpmTasks('grunt-contrib-coffee')
 
-  grunt.registerTask('default', ['coffee'])
+  grunt.registerTask('default', ['coffee', 'requirejs'])
