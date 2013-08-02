@@ -26,7 +26,7 @@ module.exports = (grunt) ->
           baseUrl:        "target/",
           mainConfigFile: "require-config.js",
           out:            "dist/application.js",
-          name:           "application"
+          name:           "index/main"
         }
       }
     },
