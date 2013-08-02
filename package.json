@@ -8,11 +8,19 @@
     "start": "coffee app.coffee"
   },
   "dependencies": {
-    "amdefine":        "*",
-    "coffee-script":   "*",
-    "express":         "3.3.4",
-    "jade":            "*",
-    "less-middleware": "*",
-    "requirejs":       "*"
+    "amdefine":                "*",
+    "coffee-script":           "*",
+    "express":                 "3.3.4",
+    "jade":                    "*",
+    "less-middleware":         "*",
+    "requirejs":               "*",
+    "grunt":                   "*",
+    "underscore":              "*",
+    "underscore.string":       "*",
+    "jquery":                  "*",
+    "jqueryui-browser":        "*",
+    "grunt-contrib-coffee":    "*",
+    "grunt-contrib-requirejs": "*",
+    "grunt-contrib-uglify":    "*"
   }
 }
