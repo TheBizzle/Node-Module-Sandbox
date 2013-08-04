@@ -17,7 +17,7 @@
     "grunt":                   "*",
     "underscore":              "*",
     "underscore.string":       "*",
-    "jquery":                  "*",
+    "jquery":                  "1.7.3",
     "jqueryui-browser":        "*",
     "grunt-contrib-coffee":    "*",
     "grunt-contrib-requirejs": "*",
