@@ -20,6 +20,30 @@ module.exports = (grunt) ->
         }
       }
     },
+    copy: {
+      main: {
+        files: [
+          {
+            expand:  true,
+            flatten: true,
+            src: [   'node_modules/jquery/lib/node-jquery.js'
+                   , 'node_modules/jqueryui-browser/ui/jquery-ui.js'
+                   , 'node_modules/underscore/underscore.js'
+                   , 'node_modules/underscore.string/lib/underscore.string.js' ],
+            dest: 'target/'
+          }
+        ]
+      }
+    },
+    rename: {
+      main: {
+        files: [
+          { src: 'target/underscore.string.js', dest: 'target/underscore-string.js' },
+          { src: 'target/jquery-ui.js',         dest: 'target/jqueryui.js' },
+          { src: 'target/node-jquery.js',       dest: 'target/jquery.js' }
+        ]
+      }
+    },
     requirejs: {
       compile: {
         options: {
@@ -44,5 +68,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-requirejs')
   grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-contrib-rename')
 
-  grunt.registerTask('default', ['coffee', 'requirejs'])
+  grunt.registerTask('default', ['coffee', 'copy', 'rename', 'requirejs'])

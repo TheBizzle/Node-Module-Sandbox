@@ -20,7 +20,9 @@
     "jquery":                  "1.7.3",
     "jqueryui-browser":        "*",
     "grunt-contrib-coffee":    "*",
+    "grunt-contrib-copy":      "*",
     "grunt-contrib-requirejs": "*",
+    "grunt-contrib-rename":    "*",
     "grunt-contrib-uglify":    "*"
   }
 }
