@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "Node-Module-Sandbox",
   "description": "A place for me to play around with JS module systems (namely, RequireJS and Browserify)",
   "repository": "https://github.com/TheBizzle/Node-Module-Sandbox",
   "version": "0.0.1",
