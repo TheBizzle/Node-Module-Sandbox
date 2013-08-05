@@ -7,10 +7,10 @@ module.exports = (grunt) ->
         files: [
           {
             expand: true,
-            cwd: 'src/coffeescripts',
-            src: ['**/*.coffee'],
-            dest: 'target/',
-            ext: '.js'
+            cwd:    'src/coffeescripts',
+            src:    ['**/*.coffee'],
+            dest:   'target/',
+            ext:    '.js'
           }
         ]
       },
