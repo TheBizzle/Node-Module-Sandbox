@@ -53,19 +53,9 @@ module.exports = (grunt) ->
           name:           "index/main"
         }
       }
-    },
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name =%> <%= grunt.template.today("yyyy-mm-dd") =%> */\n'
-      },
-      build: {
-        src:  'target/js/**/*.js',
-        dest: 'build/<%= pkg.name =%>.min.js'
-      }
     }
   })
 
-  grunt.loadNpmTasks('grunt-contrib-uglify')
   grunt.loadNpmTasks('grunt-contrib-requirejs')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-copy')
