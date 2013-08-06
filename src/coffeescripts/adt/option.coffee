@@ -1,4 +1,4 @@
-define(['api/prototypes'], ([]) ->
+  require('../api/prototypes')
 
   # Type Parameter: T (the type that is maybe (or maybe not) wrapped inside of the `Option`)
   class Option
@@ -92,10 +92,9 @@ define(['api/prototypes'], ([]) ->
 
   NoneObj = OptionCompanion.empty
 
-  {
+  module.exports = {
     Some:   Some
     None:   NoneObj
     Option: OptionCompanion
   }
 
-)

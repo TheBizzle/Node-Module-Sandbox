@@ -1,8 +1,10 @@
 # This class represents a wrapper around `Object`s, with some methods for doing things non-stupidly
-define(['api/cloner', 'api/prototypes', 'api/underscore']
-     , ( Cloner,       [],               _) ->
+  require('../api/prototypes')
 
-  class Obj
+  _      = require('../api/underscore')
+  Cloner = require('../api/cloner')
+
+  module.exports = class Obj
 
     # _obj: Object[T]
     constructor: (@_obj) ->
@@ -89,4 +91,3 @@ define(['api/cloner', 'api/prototypes', 'api/underscore']
       f(out)
       new Obj(out)
 
-)

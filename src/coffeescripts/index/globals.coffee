@@ -1,5 +1,5 @@
 # Non-selector globals
-define({
+module.exports = {
   playerNums: undefined
-})
+}
 

@@ -1,3 +1,3 @@
-define({
+module.exports = {
   MaxPlayerCount: 10
-})
+}

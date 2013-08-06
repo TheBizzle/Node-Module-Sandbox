@@ -1,4 +1,4 @@
-define({
+module.exports = {
   "Agent Carr":                  { enabled: true,  faction: "Vydar"   },
   "Airborne Elite":              { enabled: true,  faction: "Jandar"  },
   "Alastair MacDirk":            { enabled: true,  faction: "Jandar"  },
@@ -117,5 +117,5 @@ define({
   "Warriors of Ashra":           { enabled: true,  faction: "Ullar"   },
   "Wolves of Badru":             { enabled: true,  faction: "Utgar"   },
   "Zettian Guards":              { enabled: true,  faction: "Utgar"   }
-})
+}
 

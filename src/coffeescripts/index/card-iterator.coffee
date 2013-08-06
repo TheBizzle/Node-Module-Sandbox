@@ -1,5 +1,6 @@
-define(['api/prototypes', 'api/jquery', 'adt/iterator', 'adt/obj']
-      , ([],               $,            Iterator,       Obj) ->
+  require('../api/prototypes')
+
+  [$, Iterator, Obj] = [require('../api/jquery'), require('../adt/iterator'), require('../adt/obj')]
 
   class CardIterator extends Iterator
 
@@ -27,6 +28,5 @@ define(['api/prototypes', 'api/jquery', 'adt/iterator', 'adt/obj']
 
       super(new Obj(state), iterateFunc)
 
-  CardIterator
+  module.exports = CardIterator
 
-)

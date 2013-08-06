@@ -1,4 +1,4 @@
-define(['jqueryui'], ($) ->
+  $ = require('jqueryui-browser')
 
   # (String) => jQuery
   $.byID = (id) -> $('#' + id)
@@ -14,7 +14,5 @@ define(['jqueryui'], ($) ->
 
   })
 
-  $
-
-)
+  module.exports = $
 

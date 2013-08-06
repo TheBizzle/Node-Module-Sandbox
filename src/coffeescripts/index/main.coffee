@@ -1,9 +1,15 @@
-define(["main", "api/prototypes", "adt/obj", "adt/option", "api/jquery", "api/underscore"
-       ,"index/card-iterator", "index/cards", "index/constants", "index/globals", "index/element", "index/jglobals", "index/onload"]
-      , (main,   [],               Obj,       Opt,          $,            _
-       , CardIterator,          Cards,         Constants,         globals,         Element,         $globals,         []) ->
 
-  class Index
+  require('../api/prototypes')
+  require('./onload')
+
+  [main, Obj, Opt] = [require('../main'),       require('../adt/obj'),        require('../adt/option')]
+  [$, _]           = [require('../api/jquery'), require('../api/underscore')]
+
+  [CardIterator, Cards]    = [require('./card-iterator'), require('./cards')]
+  [Constants,    globals]  = [require('./constants'),     require('./globals')]
+  [Element,      $globals] = [require('./element'),       require('./jglobals')]
+
+  module.exports = class Index
 
     constructor: ->
       @_resetIterator()
@@ -157,6 +163,4 @@ define(["main", "api/prototypes", "adt/obj", "adt/option", "api/jquery", "api/un
       )
 
       cardObj
-
-)
 

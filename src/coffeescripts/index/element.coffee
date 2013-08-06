@@ -1,6 +1,8 @@
 # All public functions should return a single object of type `jQuery`
 
-define(['api/jquery', 'api/prototypes'], ($, []) ->
+  require('../api/prototypes')
+
+  $ = require('../api/jquery')
 
   # (String, String, String, String) => jQuery
   _generateCardEntry = (name, id, url, faction) ->
@@ -59,7 +61,7 @@ define(['api/jquery', 'api/prototypes'], ($, []) ->
         domCopyOf($(this)).removeClass("hidden")
     )
 
-  {
+  module.exports = {
 
     # (String, Boolean) => jQuery
     generateCardCheckbox: (cardname, isEnabled) ->
@@ -109,6 +111,4 @@ define(['api/jquery', 'api/prototypes'], ($, []) ->
       elem
 
   }
-
-)
 

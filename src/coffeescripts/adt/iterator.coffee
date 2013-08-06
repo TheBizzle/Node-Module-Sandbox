@@ -1,7 +1,9 @@
 # Currently, this structure is very similar in operation to a `State` monad
 # Once `iterate` returns `undefined`, the `Iterator` is considered to have reached the end of iteration
-define(['api/prototypes', 'adt/option', 'api/underscore']
-     , ( [],               Opt,          _) ->
+  require('../api/prototypes')
+
+  _   = require('../api/underscore')
+  Opt = require('./option')
 
   Option = Opt.Option
   None   = Opt.None
@@ -208,6 +210,4 @@ define(['api/prototypes', 'adt/option', 'api/underscore']
     manip: (argOpt) => argOpt.map((arg) => @_f(arg))
 
 
-  Iterator
-
-)
+  module.exports = Iterator

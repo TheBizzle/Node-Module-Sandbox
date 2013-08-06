@@ -1,4 +1,4 @@
-# (Object[T]) => Object[T]
-define(['api/jquery'], ($) ->
-  (o) -> $.extend(true, {}, o)
-)
+  $ = require('../api/jquery')
+
+  # (Object[T]) => Object[T]
+  module.exports = (o) -> $.extend(true, {}, o)
