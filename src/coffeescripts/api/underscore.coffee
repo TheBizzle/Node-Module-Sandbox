@@ -1,6 +1,6 @@
-  require('underscore.string')
-  _ = require('underscore')
+  _    = require('underscore')
+  ustr = require('underscore.string')
 
-  _.mixin(_.str.exports())
+  _.mixin(ustr.exports())
 
   module.exports = _

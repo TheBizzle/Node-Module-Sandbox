@@ -1,3 +1,4 @@
+  require('jquery')
   $ = require('jqueryui-browser')
 
   # (String) => jQuery
