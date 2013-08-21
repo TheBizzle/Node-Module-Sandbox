@@ -1,4 +1,4 @@
-This project is unlikely to have any benefit for anyone but me.  Unless you are me, I suggest that you stop wasting your time looking at this soon/now.
+This project is unlikely to have any benefit for anyone but me.  Unless you are me, I suggest that you stop wasting your time looking at this soon (or maybe even now).
 
 If you're still here... the `master` branch contains an almost-working configuration for building a snapshot of the [ClowCards](https://github.com/TheBizzle/ClowCards) CoffeeScript code with RequireJS.  For some reason, the version of jQuery that comes through Node doesn't work properly for this, but I don't actually care enough to fix it in this project; the one that matters is ClowCards.
 
