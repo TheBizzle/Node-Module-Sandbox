@@ -12,7 +12,7 @@
     "coffee-script":           "*",
     "express":                 "3.3.4",
     "jade":                    "*",
-    "less-middleware":         "*",
+    "less-middleware":         "0.1.15",
     "requirejs":               "*",
     "grunt":                   "*",
     "underscore":              "*",
