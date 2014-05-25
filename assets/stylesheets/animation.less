@@ -1,0 +1,124 @@
+// ========================
+// Circle/Loading Animation
+// ========================
+
+// Functions
+
+.prefixed(@prop, @value) {
+  -:~`";"+"@{prop}:@{value};-webkit-@{prop}:@{value};-moz-@{prop}:@{value};-o-@{prop}:@{value};-ms-@{prop}:@{value}".replace(/'/g,"")`;
+}
+
+.anim-delay(@value) {
+  .prefixed('animation-delay', @value);
+}
+
+
+// Values
+
+@light-color:     #FFFFFF;
+@dark-color:      #181818;
+@circle-diameter: 10px;
+
+@vert-middle-push-horiz: 16px;
+@vert-middle-push-down:  41px;
+
+@top-bottom-push-horiz: 28px;
+@top-bottom-push-vert:  16px;
+
+@duration:     0.13s;
+@circle-count: 6;
+
+
+// Rules
+
+.fade-anim-wrapper {
+  position: relative;
+  display:  inline-block;
+}
+
+.fade-anim-circle {
+
+  width:            @circle-diameter;
+  height:           @circle-diameter;
+  background-color: @light-color;
+  position:         absolute;
+
+  .prefixed('border-radius',              5px);
+  .prefixed('animation-name',            'fade-anim');
+  .prefixed('animation-duration',         @duration * @circle-count);
+  .prefixed('animation-iteration-count', 'infinite');
+  .prefixed('animation-direction',       'normal');
+
+}
+
+.fade-anim-1 {
+  left: @vert-middle-push-horiz;
+  top:  @vert-middle-push-down;
+  .anim-delay(@duration * 0);
+}
+
+.fade-anim-2 {
+  left: @top-bottom-push-horiz;
+  top:  @top-bottom-push-vert;
+  .anim-delay(@duration * 1);
+}
+
+.fade-anim-3 {
+  right: @top-bottom-push-horiz;
+  top:   @top-bottom-push-vert;
+  .anim-delay(@duration * 2);
+}
+
+.fade-anim-4 {
+  right: @vert-middle-push-horiz;
+  top:   @vert-middle-push-down;
+  .anim-delay(@duration * 3);
+}
+
+.fade-anim-5 {
+  right:  @top-bottom-push-horiz;
+  bottom: @top-bottom-push-vert;
+  .anim-delay(@duration * 4);
+}
+
+.fade-anim-6 {
+  left:   @top-bottom-push-horiz;
+  bottom: @top-bottom-push-vert;
+  .anim-delay(@duration * 5);
+}
+
+@-moz-keyframes fade-anim {
+
+  0% {
+    background-color: @dark-color;
+  }
+
+  100% {
+    background-color: @light-color;
+  }
+
+}
+
+@-webkit-keyframes fade-anim {
+
+  0% {
+    background-color: @dark-color;
+  }
+
+  100% {
+    background-color: @light-color;
+  }
+
+}
+
+@keyframes fade-anim {
+
+  0% {
+    background-color: @dark-color;
+  }
+
+  100% {
+    background-color: @light-color;
+  }
+
+}

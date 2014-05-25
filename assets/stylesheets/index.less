@@ -1,0 +1,145 @@
+// Functions
+
+
+
+// Values
+
+@image-side-length: 75px;
+
+
+// Abstract Rules
+
+.has-row-height {
+  height: 200px;
+}
+
+.no-focus-outline {
+  outline: none;
+}
+
+
+// Class Rules
+
+.card-row {
+  .has-row-height;
+  width:  100%;
+  border: 6px solid #FFFFFF;
+}
+
+.entry-image {
+  height:        @image-side-length;
+  width:         @image-side-length;
+  border:        none;
+  border-radius: 8px;
+  padding:       8px;
+}
+
+.entry-text-inner {
+  margin-left:  auto;
+  margin-right: auto;
+}
+
+.entry-text-middle {
+  width:          100%;
+  display:        table-cell;
+  vertical-align: middle;
+  position:       static;
+}
+
+.entry-text-outer {
+  height:   110px;
+  width:    100%;
+  display:  table;
+  overflow: hidden;
+  position: static;
+}
+
+.entry-wrapper {
+  width:   240px;
+  height:  180px;
+  padding: 35px 20px;
+}
+
+.glowing-border {
+
+  @color: #ED0000;
+
+  border-color: @color;
+  box-shadow:   0 0 40px @color;
+
+}
+
+.outer-wrapper {
+  overflow: auto;
+  padding:  40px 45px;
+}
+
+.player-button {
+  margin-left:    10px;
+  vertical-align: middle;
+  cursor:         pointer;
+}
+
+.player-content {
+  height:  100%;
+  padding: 10px 20px;
+}
+
+.player-name {
+  width:          85%;
+  font-size:      20px;
+  vertical-align: middle;
+}
+
+.player-spacer {
+  width: 8%;
+}
+
+.row-content {
+ .has-row-height;
+ width:  79%;
+}
+
+.row-divider {
+  height: 70%;
+  width:  2px;
+  background-color: white
+}
+
+
+// ID Rules
+
+#btn-wrapper {
+  width:            450px;
+  padding:          8px;
+  background-color: #33B546;
+  border-radius:    10px;
+}
+
+#card-holder {
+  text-align: justify;
+}
+
+#card-num-spinner {
+  .no-focus-outline;
+  width: 75px;
+  color: white;
+}
+
+#index-accordion {
+  margin-top: 5px;
+}
+
+#name-input {
+  .no-focus-outline;
+  padding:        5px 8px;
+  width:          140px;
+  font-size:      20px;
+  border-radius:  8px;
+  vertical-align: middle;
+}
+
+#pick-btn {
+  width:  100%;
+  border: 3px solid black;
+}
