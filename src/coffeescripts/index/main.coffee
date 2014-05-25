@@ -70,7 +70,7 @@ define(["main", "api/prototypes", "adt/obj", "adt/option", "api/jquery", "api/un
 
     # (String) => String
     genPriorityImageURL: (name) ->
-      "/assets/images/index/priority/#{name}.png"
+      "./assets/images/index/priority/#{name}.png"
 
     # (String) => Unit
     _genRow: (name) =>
@@ -132,7 +132,7 @@ define(["main", "api/prototypes", "adt/obj", "adt/option", "api/jquery", "api/un
 
     # (String) => String
     _genCardImageURL = (name) ->
-      "/assets/images/index/#{name.slugify()}.png"
+      "./assets/images/index/#{name.slugify()}.png"
 
     # (String) => String
     generatePlayerID = (num) ->

@@ -75,7 +75,7 @@ define(['api/jquery', 'api/prototypes'], ($, []) ->
 
     # (String, String, String, () => Unit) => jQuery
     generatePlayerRow: (name, id, imgID, onclick) ->
-      img  = $("""<img id='#{imgID}' src='/assets/images/index/priority/simple-x.png' class="player-button">""").click(onclick)
+      img  = $("""<img id='#{imgID}' src='./assets/images/index/priority/simple-x.png' class="player-button">""").click(onclick)
       elem = $(
         """
         <table id="#{id}" class="player-table round-bordered card-row has-headroom">
