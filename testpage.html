@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test Page</title>
+    <link rel="stylesheet" media="screen" href="./dist/animation.css">
+    <link rel="stylesheet" media="screen" href="./dist/main.css">
+    <link rel="stylesheet" media="screen" href="./assets/stylesheets/managed/jquery-ui-1.9.2.custom.min.css">
+  </head>
+  <body>
+    <link rel="stylesheet" media="screen" href="./dist/index.css">
+    <script type="text/javascript" src="./target/jquery.js"></script>
+    <script type="text/javascript" src="./target/jqueryui.js"></script>
+    <script type="text/javascript" src="./target/underscore.js"></script>
+    <script type="text/javascript" src="./target/underscore-string.js"></script>
+    <script type="text/javascript" data-main="./target/index.js" src="./node_modules/requirejs/require.js"></script>
+    <div id="index-accordion" class="collapsible-accordion">
+      <h3>Draft Cards</h3>
+      <div id="main-box" class="ui-widget ui-widget-content ui-corner-all outer-wrapper accordion-div">
+        <div id="card-container">
+          <table id="adder-table" class="round-bordered card-row has-headroom">
+            <tr>
+              <td class="player-content">
+                <table>
+                  <tr>
+                    <td>
+                      <input id="name-input" type="text" autofocus="autofocus" placeholder="Player name">
+                    </td>
+                    <td>
+                      <img id="adder-button" src="./assets/images/index/priority/simple-plus.png" alt="Add Player" class="player-button">
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td>
+                <div class="row-divider"></div>
+              </td>
+              <td class="row-content">
+                <table>
+                  <tr class="row-content-row">
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="has-headroom">
+          <label for="card-num-spinner">Number of cards:</label>
+          <input id="card-num-spinner" class="ui-spinner" name="value">
+          <div id="btn-wrapper" class="has-headroom">
+            <button id="pick-btn" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false">
+              <span class="ui-button-text">Pick Cards!</span>
+            </button>
+            </div>
+        </div>
+      </div>
+      <h3>Customize Cardset</h3>
+      <div id="card-holder" class="accordion-div"></div>
+    </div>
+  </body>
+</html>
