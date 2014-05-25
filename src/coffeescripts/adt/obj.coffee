@@ -1,6 +1,5 @@
 # This class represents a wrapper around `Object`s, with some methods for doing things non-stupidly
-define(['api/cloner', 'api/prototypes', 'api/underscore']
-     , ( Cloner,       [],               _) ->
+define(['api/cloner', 'api/prototypes', 'api/underscore'], ( Cloner,       [],               _) ->
 
   class Obj
 

@@ -8,17 +8,17 @@
     "start": "coffee app.coffee"
   },
   "dependencies": {
-    "requirejs":               "2.1.11",
-    "grunt":                   "0.4.5",
-    "underscore":              "1.6.0",
-    "underscore.string":       "2.3.3",
-    "jquery":                  "1.7.3",
-    "jqueryui-browser":        "1.10.2-1",
-    "grunt-contrib-coffee":    "0.10.1",
-    "grunt-contrib-copy":      "0.5.0",
-    "grunt-contrib-less":      "0.11.0",
-    "grunt-contrib-requirejs": "0.4.4",
-    "grunt-contrib-rename":    "0.0.3",
-    "grunt-contrib-uglify":    "0.4.0"
+    "requirejs":                 "2.1.11",
+    "grunt":                     "0.4.5",
+    "underscore":                "1.6.0",
+    "underscore.string":         "2.3.3",
+    "jquery":                    "1.7.3",
+    "jqueryui-browser":          "1.10.2-1",
+    "grunt-typed-coffee-script": "0.2.5-3",
+    "grunt-contrib-copy":        "0.5.0",
+    "grunt-contrib-less":        "0.11.0",
+    "grunt-contrib-requirejs":   "0.4.4",
+    "grunt-contrib-rename":      "0.0.3",
+    "grunt-contrib-uglify":      "0.4.0"
   }
 }

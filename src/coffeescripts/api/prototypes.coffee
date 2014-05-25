@@ -12,13 +12,13 @@ require(['api/underscore'], (_) ->
 
   # () => Array[T]
   Array::distinct = ->
-    _(this).foldl(
+    f = 
       (acc, x) ->
         if _(acc).any((y) -> y is x) # The efficiency of this is piss-poor; I wish I had a decent way to make maps in JavaScript...
           acc
         else
           acc.append(x)
-    , [])
+    _(this).foldl(f, [])
 
   # (Int) => Array[T]
   Array::removeAt = (index) ->

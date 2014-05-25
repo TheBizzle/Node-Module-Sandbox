@@ -1,17 +1,18 @@
 # Currently, this structure is very similar in operation to a `State` monad
 # Once `iterate` returns `undefined`, the `Iterator` is considered to have reached the end of iteration
-define(['api/prototypes', 'adt/option', 'api/underscore']
-     , ( [],               Opt,          _) ->
+define(['api/prototypes', 'adt/option', 'api/underscore'], ( [],               Opt,          _) ->
 
   Option = Opt.Option
   None   = Opt.None
 
   class Iterator
 
-    # Takes an initial state (_state: T), and a function for iterating over that state (_f: (T) => [U, T])
-    # `_f` should be a function that takes a single argument (`_state`) and returns `[x, newState]`,
+    # Takes an initial state (state: T), and a function for iterating over that state (f: (T) => [U, T])
+    # `f` should be a function that takes a single argument (`state`) and returns `[x, newState]`,
     # where `x` is some value, or `undefined` only when iteration is complete.
-    constructor: (@_state, @_f) ->
+    constructor: (state, f) ->
+      @_state     = state
+      @_f         = f
       @_atEnd     = false
       @_cached    = undefined # Kinda gross, but... okay (necessary for `dropWhile`; nice for `takeWhile`)
       @_manipList = new ManipList([])

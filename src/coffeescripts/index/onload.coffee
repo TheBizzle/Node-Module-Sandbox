@@ -1,7 +1,4 @@
-require(['main', 'index/cards', 'index/globals', 'index/element', 'index/jglobals', 'index/main', 'index/services'
-        ,'api/prototypes', 'adt/obj', 'api/jquery', 'api/underscore']
-       , ([],     Cards,         globals,         Element,         $globals,         Index,        Services
-        , [],               Obj,       $,            _) ->
+require(['main', 'index/cards', 'index/globals', 'index/element', 'index/jglobals', 'index/main', 'index/services','api/prototypes', 'adt/obj', 'api/jquery', 'api/underscore'], ([],     Cards,         globals,         Element,         $globals,         Index,        Services, [],               Obj,       $,            _) ->
 
   # Initialize globals and selectors
   window.addEventListener('load', ->
@@ -40,12 +37,13 @@ require(['main', 'index/cards', 'index/globals', 'index/element', 'index/jglobal
 
     $cardHolder.children(".dynamic-check-label").each(->
       elem = $(this)
-      elem.click(-> # Stupid hack to get around fidgetty button-click behavior
-        btn = $.byID(elem.attr("for"))
-        btn[0].checked = not btn[0].checked
-        btn.button("refresh")
-        btn.change()
-        false
+      elem.click(
+        -> # Stupid hack to get around fidgetty button-click behavior
+          btn = $.byID(elem.attr("for"))
+          btn[0].checked = not btn[0].checked
+          btn.button("refresh")
+          btn.change()
+          false
       )
     )
 

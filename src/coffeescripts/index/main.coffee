@@ -1,7 +1,4 @@
-define(["index/onload", "main", "api/prototypes", "adt/obj", "adt/option", "api/jquery", "api/underscore"
-       ,"index/card-iterator", "index/cards", "index/constants", "index/globals", "index/element", "index/jglobals"]
-      , ([],             main,   [],               Obj,       Opt,          $,            _
-       , CardIterator,          Cards,         Constants,         globals,         Element,         $globals) ->
+define(["index/onload", "main", "api/prototypes", "adt/obj", "adt/option", "api/jquery", "api/underscore","index/card-iterator", "index/cards", "index/constants", "index/globals", "index/element", "index/jglobals"], ([],             main,   [],               Obj,       Opt,          $,            _, CardIterator,          Cards,         Constants,         globals,         Element,         $globals) ->
 
   class Index
 

@@ -11,7 +11,7 @@ module.exports = (grunt) ->
         }
       }
     },
-    coffee: {
+    typedcoffee: {
       compile: {
         files: [
           {
@@ -65,9 +65,9 @@ module.exports = (grunt) ->
   })
 
   grunt.loadNpmTasks('grunt-contrib-requirejs')
-  grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-typed-coffee-script')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-rename')
 
-  grunt.registerTask('default', ['less', 'coffee', 'copy', 'rename', 'requirejs'])
+  grunt.registerTask('default', ['less', 'typedcoffee', 'copy', 'rename', 'requirejs'])
