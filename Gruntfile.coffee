@@ -35,7 +35,7 @@ module.exports = (grunt) ->
           {
             expand:  true,
             flatten: true,
-            src: [   'node_modules/jquery/lib/node-jquery.js'
+            src: [   'node_modules/jquery/tmp/jquery.js'
                    , 'node_modules/jqueryui-browser/ui/jquery-ui.js'
                    , 'node_modules/underscore/underscore.js'
                    , 'node_modules/underscore.string/lib/underscore.string.js' ],
@@ -48,8 +48,7 @@ module.exports = (grunt) ->
       main: {
         files: [
           { src: 'target/underscore.string.js', dest: 'target/underscore-string.js' },
-          { src: 'target/jquery-ui.js',         dest: 'target/jqueryui.js' },
-          { src: 'target/node-jquery.js',       dest: 'target/jquery.js' }
+          { src: 'target/jquery-ui.js',         dest: 'target/jqueryui.js' }
         ]
       }
     },

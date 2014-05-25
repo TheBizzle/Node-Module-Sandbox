@@ -1,4 +1,4 @@
-define(['jqueryui'], ($) ->
+define(->
 
   # (String) => jQuery
   $.byID = (id) -> $('#' + id)

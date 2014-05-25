@@ -1,4 +1,4 @@
-define(['underscore', 'underscore-string'], (_) ->
+define(->
   _.mixin(_.str.exports())
   _
 )
