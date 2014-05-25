@@ -11,24 +11,6 @@ module.exports = (grunt) ->
         }
       }
     },
-    coffee: {
-      compile: {
-        files: [
-          {
-            expand: true,
-            cwd:    'src/coffeescripts',
-            src:    ['**/*.coffee'],
-            dest:   'target/',
-            ext:    '.js'
-          }
-        ]
-      },
-      compile_require_config: {
-        files: {
-          'require-config.js': ['require-config.coffee']
-        }
-      }
-    },
     copy: {
       main: {
         files: [
@@ -52,22 +34,21 @@ module.exports = (grunt) ->
         ]
       }
     },
-    requirejs: {
-      compile: {
+    ts: {
+      build: {
+        src:    ["src/typescripts/**/*.ts"],
+        outDir:  'target/',
+        watch:   'src/typescripts'
         options: {
-          baseUrl:        "target/",
-          mainConfigFile: "require-config.js",
-          out:            "dist/application.js",
-          name:           "index/main"
+          noImplicitAny: true
         }
       }
     }
   })
 
-  grunt.loadNpmTasks('grunt-contrib-requirejs')
-  grunt.loadNpmTasks('grunt-contrib-coffee')
+  grunt.loadNpmTasks('grunt-ts')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-rename')
 
-  grunt.registerTask('default', ['less', 'coffee', 'copy', 'rename', 'requirejs'])
+  grunt.registerTask('default', ['less', 'copy', 'rename', 'ts'])

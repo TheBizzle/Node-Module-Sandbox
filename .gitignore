@@ -1,3 +1,5 @@
+/.idea/
+/.tscache/
 /dist/
 /node_modules/
 /require-config.js
