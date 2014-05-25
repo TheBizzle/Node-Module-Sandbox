@@ -8,7 +8,6 @@
     "start": "coffee app.coffee"
   },
   "dependencies": {
-    "coffee-script":           "1.7.1",
     "requirejs":               "2.1.11",
     "grunt":                   "0.4.5",
     "underscore":              "1.6.0",
