@@ -21,6 +21,7 @@
     "jqueryui-browser":        "*",
     "grunt-contrib-coffee":    "*",
     "grunt-contrib-copy":      "*",
+    "grunt-contrib-less":      "0.11.0",
     "grunt-contrib-requirejs": "*",
     "grunt-contrib-rename":    "*",
     "grunt-contrib-uglify":    "*"

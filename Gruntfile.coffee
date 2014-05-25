@@ -2,6 +2,15 @@ module.exports = (grunt) ->
 
   grunt.initConfig({
     pkg:    grunt.file.readJSON('package.json'),
+    less: {
+      production: {
+        files: {
+          "dist/animation.css": "assets/stylesheets/animation.less"
+          "dist/index.css":     "assets/stylesheets/index.less"
+          "dist/main.css":      "assets/stylesheets/main.less"
+        }
+      }
+    },
     coffee: {
       compile: {
         files: [
@@ -59,6 +68,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-requirejs')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-copy')
+  grunt.loadNpmTasks('grunt-contrib-less')
   grunt.loadNpmTasks('grunt-contrib-rename')
 
-  grunt.registerTask('default', ['coffee', 'copy', 'rename', 'requirejs'])
+  grunt.registerTask('default', ['less', 'coffee', 'copy', 'rename', 'requirejs'])
